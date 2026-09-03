@@ -43,3 +43,13 @@ gcc -std=c99 -Wall -Wextra -o app main.c
 
 # Run
 ./app
+---
+
+## Author Information
+
+| Field | Details |
+| :--- | :--- |
+| **Name** | Mohamed Elgendy |
+| **Email** | 123mohamed3210@gmail.com |
+| **GitHub** | [@mohamed-elgendy123](https://github.com/mohamed-elgendy123) |
+| **Repository** | [project_2](https://github.com/mohamed-elgendy123/project_2) |
