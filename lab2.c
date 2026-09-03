@@ -19,7 +19,7 @@ typedef enum { LIGHT_GREEN = 0, LIGHT_YELLOW, LIGHT_RED } LightState_t;
 #define SET_BIT(reg, n)    ((reg) |=  (uint8_t)(1U << (n)))
 #define CLR_BIT(reg, n)    ((reg) &= (uint8_t)~(1U << (n)))
 #define TOGGLE_BIT(reg, n) ((reg) ^=  (uint8_t)(1U << (n)))
-#define READ_BIT(reg, n)   ((uint8_t)(((reg) >> (n)) & 1U))
+#define READ_BIT(reg, n)   ((uint8_t)(((uint8_t)(reg) >> (n)) & (uint8_t)1U))
 
 static LightState_t light;
 static uint8_t      status;
@@ -145,7 +145,7 @@ static void showLog(void) {
 
 static void printBinary8(uint8_t v) {
     for (int i = 7; i >= 0; --i) {
-        putchar(((v >> i) & 1U) ? '1' : '0');
+        putchar(((v >> i) & 1) ? '1' : '0');
     }
 }
 
